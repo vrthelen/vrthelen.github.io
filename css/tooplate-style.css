@@ -217,7 +217,7 @@ body {
 /* clearfix */
 .grid:after {
   content: '';
-  display: block;
+  display: inline-grid;
   clear: both;
 }
 
