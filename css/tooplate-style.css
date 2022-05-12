@@ -294,7 +294,11 @@ address { line-height: 2; }
 	position: relative;
 	margin: -1.5rem auto;
 	list-style: none;
-	text-align: center;	
+	text-align: center;
+	margin: auto;
+	width: -moz-fit-content; /* For Mozilla firefox*/
+	width: -webkit-fit-content; /* For Google Chrome */
+	width: fit-content;
 }
 
 @media (min-width: 524px) {	
