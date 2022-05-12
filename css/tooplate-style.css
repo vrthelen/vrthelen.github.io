@@ -97,7 +97,7 @@ body {
 }
 
 .tm-nav-item-link:focus { text-decoration: none; }
-.tm-orange-text { color: #CC6733; }
+.tm-orange-text { color: #339999; }
 .tm-button,
 .tm-button:focus {
 	background-color: #fff;
@@ -112,8 +112,8 @@ body {
 .tm-button:hover,
 .tm-button.active {
 	background-color: #fff;
-	border: 1px solid #CC6733;
-	color: #CC6733;
+	border: 1px solid #339999;
+	color: #339999;
 	text-decoration: none;
 }
 
@@ -127,9 +127,9 @@ body {
 }
 
 .tm-button-normal:focus { outline: none; }
-.tm-bg-orange { background-color: #CC6733; color:white; }
+.tm-bg-orange { background-color: #339999; color:white; }
 .tm-button-rounded { border-radius: 8px; padding-top: 12px; padding-bottom: 12px; }
-.tm-button-orange { background-color: #CC6733; }
+.tm-button-orange { background-color: #339999; }
 .tm-button-orange:hover,
 .tm-button-orange:focus { background-color: #e68d5f; }
 .tm-bg-pink { background-color: #CC6690; }
@@ -172,7 +172,7 @@ body {
 .tm-banner { padding: 0; }
 	
 .tm-banner-inner {
-	background-color: #CC6733;
+	background-color: #339999;
 	color: white;
 	height: 100%;
 	padding: 35px 35px 45px;
@@ -241,7 +241,7 @@ body {
 }
 
 .form-control:focus {
-    border-color: #CC6733;
+    border-color: #339999;
     box-shadow: inset 0 1px 1px rgba(230, 141, 95, .075), 0 0 8px rgba(230, 141, 95, 0.58);
 }
 
