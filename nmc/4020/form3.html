@@ -22,15 +22,15 @@
             <output class="price-output" for="price"></output>
         </form>
     </main>
-    <script>
-        const price = document.querySelector('#price');
-        const output = document.querySelector('.price-output');
-        
-        output.textContent = price.value;
-        
-        price.addEventListener('input', () => {
-          output.textContent = price.value;
-        });
-        </script>
 </body>
 </html>
+<script>
+    const price = document.querySelector('#price');
+    const output = document.querySelector('.price-output');
+    
+    output.textContent = price.value;
+    
+    price.addEventListener('input', () => {
+      output.textContent = price.value;
+    });
+    </script>
