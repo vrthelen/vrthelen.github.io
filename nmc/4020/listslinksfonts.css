@@ -1,3 +1,7 @@
 ul li {
-    background-image: url(background.jpg)
+    padding-left: 2rem;
+    background-image: url(wing.png);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
 }
