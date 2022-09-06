@@ -5,3 +5,7 @@ ul li {
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
 }
+
+ul {
+    list-style-type: none;
+}
