@@ -6,19 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model</title>
     <style>
-        .gradient {
-
-            /* can be treated like a fallback */
-            background-color: red;
-
-            /* will be "on top", if browser supports it */
-            background-image: linear-gradient(red, orange);
-
-            /* these will reset other properties, like background-position, but it does know what you mean */
-            background: red;
-            background: linear-gradient(red, orange);
-
-            }
+        .color-hint {
+            background: linear-gradient(blue, 10%, pink);
+        }
+        body {
+            background-image: linear-gradient(blue, 10%, pink);;
+        }
     </style>
 </head>
 <body>
