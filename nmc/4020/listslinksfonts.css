@@ -9,3 +9,15 @@ ul li {
 ul {
     list-style-type: none;
 }
+
+a:active {
+    color: rgb(223, 111, 158);
+  }
+
+  a:visited {
+    color:rgb(90, 55, 44)
+  }
+
+  a {
+    border-radius: 30px;
+  }
