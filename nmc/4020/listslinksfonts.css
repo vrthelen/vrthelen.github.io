@@ -18,6 +18,9 @@ a:active {
     color:rgb(90, 55, 44)
   }
 
+  a:hover {
+    color:aquamarine;
+  }
   a {
     border-radius: 30px;
   }
