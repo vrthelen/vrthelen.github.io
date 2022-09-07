@@ -21,6 +21,9 @@ a:active {
   a:hover {
     color:aquamarine;
   }
+
   a {
     border-radius: 30px;
+    text-decoration: dotted;
+    border:rgb(223, 111, 158);
   }
