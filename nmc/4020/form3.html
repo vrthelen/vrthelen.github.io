@@ -35,3 +35,10 @@
       output.textContent = price.value;
     });
     </script>
+    <input type="color" name="color" id="colorpicker" onchange="changecolor(this)">
+    <script>
+        function changecolor(el) {
+            document.body.style.backgroundColor = el.value;
+        }
+    </script>
+    <input type="submit" value="Send">
