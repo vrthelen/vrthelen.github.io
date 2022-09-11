@@ -3,6 +3,10 @@ body {
     font-family:'Courier New', Courier, monospace;
 }
 
+h1,h2,h3 {
+    align-items: center;
+}
+
 h1 {
     font-size: larger;
     text-transform: capitalize;
