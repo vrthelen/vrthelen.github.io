@@ -6,31 +6,30 @@
     position: relative;
     top: 0;
     transform: rotate(-45deg);
-    position: absolute;
+    position: absolute; 
     left: 45%; top: 45%;
     width: 50px;
-}
-
-.heart:before,
-.heart:after {
-  content: "";
-  background-color: red;
-  border-radius: 50%;
-  height: 50px;
-  position: absolute;
-  width: 50px;
-}
-
-.heart:before {
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .heart:before {
     top: -25px;
     left: 0;
   }
-
-.heart:after {
+  
+  .heart:after {
     left: 25px;
     top: 0;
-}
-
+  }
 @keyframes heartbeat {
     0% {
       transform: scale( 1 );    
@@ -47,6 +46,7 @@
     }
   }
 
-.heart {
-    animation: heartbeat 1s infinite;
-}
+  .heart {
+    animation: heartbeat 1s infinite; // our heart has infinite heartbeat :)
+    ...
+  }
