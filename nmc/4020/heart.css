@@ -13,23 +13,24 @@ body {
     animation: beat 2s infinite;
   }
   
-  .heart-1, .heart-2{
-  background-color: red;
-  height: 40px;
-  width: 70px;
-  position: relative;
-  bottom: 38px;
-  border-radius: 70px 70px 0px 0px;
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
   }
   
-  .heart-1{
-    bottom: 38px;
+  .heart:before {
+    top: -25px;
+    left: 0;
   }
   
-  .heart-2{
-    bottom: 25px;
-    right: 52px;
-    transform: rotate(-90deg);
+  .heart:after {
+    left: 25px;
+    top: 0;
   }
   
   @keyframes beat{
