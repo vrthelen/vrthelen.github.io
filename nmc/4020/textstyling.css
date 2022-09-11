@@ -1,0 +1,18 @@
+body {
+    font-size: 10px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: larger;
+}
+h2 {
+    font-size: large;
+}
+h3 {
+    font-size: medium;
+}
+
+p {
+    font-size: small;
+}
