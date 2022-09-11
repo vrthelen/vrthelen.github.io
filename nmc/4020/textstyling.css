@@ -11,7 +11,7 @@ body {
 h1 {
     font-size: 4rem;
     text-transform: capitalize;
-    text-shadow: pink 10px 5px 5px;
+    text-shadow: rgb(255, 124, 146) 10px 5px 5px;
 }
 h2 {
     font-size: 3rem;
