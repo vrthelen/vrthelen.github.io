@@ -1,52 +1,35 @@
-.heart {
+.heart{
     background-color: red;
-    display: inline-block;
-    height: 50px;
-    margin: 0 10px;
-    position: relative;
-    top: 0;
-    transform: rotate(-45deg);
-    position: absolute; 
-    left: 45%; top: 45%;
-    width: 50px;
-  }
-  
-  .heart:before,
-  .heart:after {
-    content: "";
-    background-color: red;
-    border-radius: 50%;
-    height: 50px;
+    height: 70px;
+    width: 70px;
     position: absolute;
-    width: 50px;
+    top: 43%;
+    left: 45%;
+    transform: rotate(45deg);
+    animation: beat 2s infinite;
   }
   
-  .heart:before {
-    top: -25px;
-    left: 0;
+  .heart-1, .heart-2{
+  background-color: red;
+  height: 40px;
+  width: 70px;
+  position: relative;
+  bottom: 38px;
+  border-radius: 70px 70px 0px 0px;
   }
   
-  .heart:after {
-    left: 25px;
-    top: 0;
+  .heart-1{
+    bottom: 38px;
   }
-@keyframes heartbeat {
-    0% {
-      transform: scale( 1 );    
-    }
-    20% {
-      transform: scale( 1.25 ) 
-        translateX(5%) 
-        translateY(5%);
-    } 
-    40% {
-      transform: scale( 1.5 ) 
-        translateX(9%) 
-        translateY(10%);
-    }
+  
+  .heart-2{
+    bottom: 25px;
+    right: 52px;
+    transform: rotate(-90deg);
   }
-
-  .heart {
-    animation: heartbeat 1s infinite; // our heart has infinite heartbeat :)
-    ...
+  
+  @keyframes beat{
+  50%{
+    transform: rotate(45deg) scale(1.5);
+  }
   }
