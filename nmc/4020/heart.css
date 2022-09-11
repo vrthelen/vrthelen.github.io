@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .heart{
     background-color: red;
     height: 70px;
