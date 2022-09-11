@@ -8,17 +8,17 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: larger;
+    font-size: 4rem;
     text-transform: capitalize;
     text-shadow: 10px;
 }
 h2 {
-    font-size: large;
+    font-size: 3rem;
 }
 h3 {
-    font-size: medium;
+    font-size: 2rem;
 }
 
 p {
-    font-size: small;
+    font-size: 1rem;
 }
