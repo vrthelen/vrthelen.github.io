@@ -2,15 +2,17 @@ body {
     background-color: black;
 }
 
-.heart{
+.heart {
     background-color: red;
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    top: 43%;
-    left: 45%;
-    transform: rotate(45deg);
-    animation: beat 2s infinite;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute; 
+    left: 45%; top: 45%;
+    width: 50px;
   }
   
   .heart:before,
