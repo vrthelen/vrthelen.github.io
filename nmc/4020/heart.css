@@ -13,6 +13,7 @@ body {
     position: absolute; 
     left: 45%; top: 45%;
     width: 50px;
+    animation: beat 2s infinite;
   }
   
   .heart:before,
@@ -40,3 +41,4 @@ body {
     transform: rotate(45deg) scale(1.5);
   }
   }
+
