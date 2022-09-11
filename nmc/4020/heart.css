@@ -47,6 +47,6 @@
     }
   }
 
-  .heart {
+.heart {
     animation: heartbeat 1s infinite;
-  }
+}
