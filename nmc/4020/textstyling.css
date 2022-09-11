@@ -3,7 +3,7 @@ body {
     font-family:'Courier New', Courier, monospace;
 }
 
-.container :is(h1, h2, h3, h4, h5, h6)
+.container :is(h1, h2, h3)
 {
     text-align: center;
 }
