@@ -38,7 +38,7 @@ body {
   
   @keyframes beat{
   50%{
-    transform: rotate(45deg) scale(1.5);
+    transform: scale(1.5);
   }
   }
 
