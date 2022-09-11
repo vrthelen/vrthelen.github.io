@@ -5,6 +5,8 @@ body {
 
 h1 {
     font-size: larger;
+    text-transform: capitalize;
+    text-shadow: 10px;
 }
 h2 {
     font-size: large;
