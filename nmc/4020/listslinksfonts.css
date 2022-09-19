@@ -27,12 +27,10 @@ a:active {
     text-decoration: dotted;
     border:rgb(223, 111, 158);
   }
-
-
 @font-face {
     font-family: "IndieFlower-Regular";
     src: url("IndieFlower-Regular.ttf")
 }
-#coolfont {
+#myfont {
     font-family: "IndieFlower-Regular";
 }
