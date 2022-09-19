@@ -1,0 +1,15 @@
+html {
+    width: 10px;
+    height: 10px;
+}
+#central {
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(rgb(182, 248, 209), rgb(200, 133, 255), rgba(172, 16, 94, 0.977));
+    border-radius: 50%;
+}
+a:hover {
+    border-color: black; 
+    border-style: solid;
+    border-width: 15px;
+}
