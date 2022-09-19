@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+        #maindiv {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            flex: 1;
+        }
+        #div1 {
+            background-color: black;
+            padding: 15px;
+            display: flex;
+            width: 220px;
+        }
+        input {
+            display: flex;
+            padding: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id = "maindiv" > 
+        <div id = "div1">
+            <button id="addButton">Add</button>
+            <button id="subButton">Subtract</button>
+            <button id="multButton">Multiply</button>
+            <button id="divButton">Divide</button>
+            <br>
+        </div>
+        <input type="number" id="input1"> <br>
+        <input type="number" id="input2"> <br>
+        <p>Output: </p>
+        <input type="text" id="output"> <br>
+    </div>
+</body>
+</html>
+<script src="js/calculate.js"></script>
