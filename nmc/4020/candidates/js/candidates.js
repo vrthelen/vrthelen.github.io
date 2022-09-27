@@ -8,3 +8,4 @@ let candidateNames = ["Jeb Bush","Ben Carson","Lincoln Chafee","Chris Christie",
 let candidatePix = ["bush.jpg","carson.jpg","chafee.jpg","christie.jpg","cruz.jpg","fiorina.jpg","gilmore.jpg","graham.jpg","jindal.jpg","kasich.jpg","lessig.jpg","omalley.jpg","pataki.jpg","paul.jpg","perry.jpg","rubio.jpg","sanders.jpg","santorum.jpg","trump.jpg","walker.jpg","webb.jpg"]
 
 let output = document.querySelector('#alsoRan');
+output.innerHTML = candidateNames[0];
