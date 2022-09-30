@@ -13,6 +13,12 @@ let i = 0;
 function canShow(plusMinus) {
     output.innerHTML = "<div class='cand'>" + candidateNames[i]+"<br><img src= pix/" + candidatePix[i]+"></cand>";
     i += plusMinus;
+    if (i == candidateNames.length) {
+        i = 0;
+    }
+    if (i < 0) {
+        i = candidateNames.length - 1;
+    }
 }
 next.onclick = function () {
     canShow(1);
