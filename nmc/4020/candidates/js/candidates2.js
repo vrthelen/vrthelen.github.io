@@ -9,3 +9,7 @@ for (var i = 0; i < candidateNames.length; i++) {
 
 let next = document.querySelector('#next');
 let previous = document.querySelector('#previous');
+let i = 0;
+function canShow(plusMinus) {
+    output.innerHTML = "<div class='cand'>" + candidateNames[i]+"<br><img src= pix/" + candidatePix[i]+"></cand>";
+}
