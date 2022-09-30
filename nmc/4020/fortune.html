@@ -9,6 +9,7 @@
 <body>
     <input type="text" id="namehere" placeholder="Your name here"><br>
     <div id="result"></div>
+    <button onclick="fortune()">Your Fortune</button>
 </body>
 </html>
 <script>
@@ -18,6 +19,5 @@
         let item = Math.floor((Math.random() * outcomes.length));
         let result = document.querySelector('#result');
         result.innerHTML = name + " your fortune is that you will " + outcomes[item];
-        <button onclick="fortune()">Your Fortune</button>
     }
 </script>
