@@ -12,4 +12,11 @@ let previous = document.querySelector('#previous');
 let i = 0;
 function canShow(plusMinus) {
     output.innerHTML = "<div class='cand'>" + candidateNames[i]+"<br><img src= pix/" + candidatePix[i]+"></cand>";
+    i += plusMinus;
+}
+next.onclick = function () {
+    canShow(1);
+}
+previous.onclick = function () {
+    canShow(-1);
 }
