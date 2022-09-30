@@ -6,3 +6,6 @@ let output = document.querySelector('#alsoRan');
 for (var i = 0; i < candidateNames.length; i++) {
     output.innerHTML += "<li>" + candidateNames[i] + "<br><img src= pix/" + candidatePix[i] + "></li>";
 }
+
+let next = document.querySelector('#next');
+let previous = document.querySelector('#previous');
