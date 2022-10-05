@@ -13,3 +13,16 @@ let z = 0; // 14-20
 output1.innerHTML = candidateNames[0] + "<br><img src= ../candidates/pix/" + candidatePix[0] + ">"; 
 output2.innerHTML = candidateNames[7] + "<br><img src= ../candidates/pix/" + candidatePix[7] + ">"; 
 output3.innerHTML = candidateNames[14] + "<br><img src= ../candidates/pix/" + candidatePix[14] + ">"; 
+
+function switchImage(i, slideshow) {
+    if (slideshow==1) {
+        x+=i;
+        if (x > 6) {
+            x=0;
+        }
+        if (x < 0) {
+            x=6;
+        }
+        output1.innerHTML = candidateNames[x] + "<br><img src= ../candidates/pix" + candidatePix[x] + ">"; 
+    }
+}
