@@ -37,7 +37,7 @@ function switchImage(i, slideshow) {
     }
     if (slideshow==3) {
         z+=i;
-        output3.innerHTML = z;
+        output3.innerHTML = "i = " + i + "and z = " + z;
         if (z > 20) {
             z=14;
         }
