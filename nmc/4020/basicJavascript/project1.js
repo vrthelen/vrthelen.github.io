@@ -7,8 +7,8 @@ let output1 = document.querySelector('#candidate1');
 let output2 = document.querySelector('#candidate2');
 let output3 = document.querySelector('#candidate3');
 let x = 0;
-let y = 0; 
-let z = 0; 
+let y = 7; 
+let z = 14; 
 
 output1.innerHTML = candidateNames[0] + "<br><img src= ../candidates/pix/" + candidatePix[0] + ">"; 
 output2.innerHTML = candidateNames[7] + "<br><img src= ../candidates/pix/" + candidatePix[7] + ">"; 
@@ -37,13 +37,12 @@ function switchImage(i, slideshow) {
     }
     if (slideshow==3) {
         z+=i;
-        output3.innerHTML = "i = " + i + "and z = " + z;
         if (z > 20) {
             z=14;
         }
         if (z < 14) {
             z=20;
         }
-        //output3.innerHTML = candidateNames[z] + "<br><img src= ../candidates/pix/" + candidatePix[z] + ">";
+        output3.innerHTML = candidateNames[z] + "<br><img src= ../candidates/pix/" + candidatePix[z] + ">";
     }
 }
