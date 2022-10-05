@@ -23,7 +23,7 @@ function switchImage(i, slideshow) {
         if (x < 0) {
             x=6;
         }
-        output1.innerHTML = candidateNames[x] + "<br><img src= ../candidates/pix" + candidatePix[x] + ">"; 
+        output1.innerHTML = candidateNames[x] + "<br><img src= ../candidates/pix/" + candidatePix[x] + ">"; 
     }
     if (slideshow==2) {
         y+=i;
@@ -33,7 +33,7 @@ function switchImage(i, slideshow) {
         if (y < 7) {
             y=13;
         }
-        output2.innerHTML = candidateNames[y] + "<br><img src= ../candidates/pix" + candidatePix[y] + ">"; 
+        output2.innerHTML = candidateNames[y] + "<br><img src= ../candidates/pix/" + candidatePix[y] + ">"; 
     }
     if (slideshow==3) {
         z+=i;
