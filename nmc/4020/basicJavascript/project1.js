@@ -36,6 +36,7 @@ function switchImage(i, slideshow) {
         output2.innerHTML = candidateNames[y] + "<br><img src= ../candidates/pix/" + candidatePix[y] + ">"; 
     }
     if (slideshow==3) {
+        output3.innerHTML = z;
         z+=i;
         output3.innerHTML = z;
         if (z > 20) {
