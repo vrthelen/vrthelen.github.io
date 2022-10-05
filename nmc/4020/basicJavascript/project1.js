@@ -25,4 +25,24 @@ function switchImage(i, slideshow) {
         }
         output1.innerHTML = candidateNames[x] + "<br><img src= ../candidates/pix" + candidatePix[x] + ">"; 
     }
+    if (slideshow==2) {
+        y+=i;
+        if (y > 13) {
+            y=7;
+        }
+        if (y < 7) {
+            y=13;
+        }
+        output2.innerHTML = candidateNames[y] + "<br><img src= ../candidates/pix" + candidatePix[y] + ">"; 
+    }
+    if (slideshow==3) {
+        z+=i;
+        if (z > 20) {
+            z=14;
+        }
+        if (z < 14) {
+            z=20;
+        }
+        output3.innerHTML = candidateNames[z] + "<br><img src= ../candidates/pix" + candidatePix[z] + ">"; 
+    }
 }
