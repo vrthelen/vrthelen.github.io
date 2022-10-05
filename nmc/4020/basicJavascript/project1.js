@@ -37,12 +37,13 @@ function switchImage(i, slideshow) {
     }
     if (slideshow==3) {
         z+=i;
+        output3.innerHTML = z;
         if (z > 20) {
             z=14;
         }
         if (z < 14) {
             z=20;
         }
-        output3.innerHTML = candidateNames[z] + "<br><img src= ../candidates/pix/" + candidatePix[z] + ">"; 
+        //output3.innerHTML = candidateNames[z] + "<br><img src= ../candidates/pix/" + candidatePix[z] + ">";
     }
 }
