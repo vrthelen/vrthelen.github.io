@@ -1,6 +1,6 @@
 let sq = document.querySelector('#square');
 
-function changeCSS() {
-    sq.style.backgroundColor = 'red';
-    sq.style.borderRadius = '90%';
+function changeCSS(bg,radius) {
+    sq.style.backgroundColor = bg;
+    sq.style.borderRadius = radius;
 }
