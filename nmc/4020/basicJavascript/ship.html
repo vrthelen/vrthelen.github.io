@@ -1,25 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
- <link rel="stylesheet" href="ship.css">
+    <link rel="stylesheet" href="ship.css">
 </head>
-
 <body>
-   
     <div id="ship">
         <div id="shipLight"></div>
     </div>
+    <button id="reverse" onclick="reverse()">reverse ship</button>
+    <button id="rotate" onclick="rotate(25)">rotate ship</button>
 </body>
 </html>
 <script>
     let ship = document.querySelector('#ship');
     let shipLight = document.querySelector('#shipLight')
+    let howFar = 0;
+    let light = 0;
+    var left = true;
+    var rotateMe = 0;
     setInterval(function() {
-     
-}, 10);
-   
-   
+        light++;
+        if (light == 25) {
+            shipLight.style.backgroundColor = 'white'
+        }
+        if (light == 50) {
+            shipLight.style.backgroundColor = 'red'
+            light = 0;
+        }
+        if (left) {
+            howFar += 5;
+        } else {
+            howFar -= 5;
+        }
+        ship.style.left = howFar+"px";
+        if (howFar>3000) {
+            howFar = -500;
+        }
+        if (howFar<-300) {
+            howFar = 3000;
+        }
+    }, 10);
+    function reverse() {
+        if (left == true) {
+            left = false;
+        } else {
+            left= true;
+        }
+    }
+    function rotate(num) {
+        rotateMe+= num;
+        ship.style.transform = "rotate("+rotateMe+"deg)";
+    }
 </script>
