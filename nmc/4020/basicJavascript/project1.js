@@ -7,3 +7,6 @@ let output1 = document.querySelector('#candidate1');
 let output2 = document.querySelector('#candidate2');
 let output3 = document.querySelector('#candidate3');
 
+let x = 0; // 0-6
+let y = 0; // 7-13
+let z = 0; // 14-20
