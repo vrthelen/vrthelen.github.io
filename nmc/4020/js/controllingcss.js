@@ -1,4 +1,5 @@
 let sq = document.querySelector('#square')
 function changeCSS() {
-    sq.getElementsByClassName.backgroundColor = 'red';
+    sq.style.backgroundColor = 'red';
+    sq.style.borderRadius = 90;
 }
