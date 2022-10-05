@@ -6,7 +6,10 @@ let candidatePix = ["bush.jpg","carson.jpg","chafee.jpg","christie.jpg","cruz.jp
 let output1 = document.querySelector('#candidate1');
 let output2 = document.querySelector('#candidate2');
 let output3 = document.querySelector('#candidate3');
-
 let x = 0; // 0-6
 let y = 0; // 7-13
 let z = 0; // 14-20
+
+output1.innerHTML = candidateNames[0] + "<br><img src= ../candidates/pix/" + candidatePix[0] + ">"; 
+output2.innerHTML = candidateNames[7] + "<br><img src= ../candidates/pix/" + candidatePix[7] + ">"; 
+output3.innerHTML = candidateNames[14] + "<br><img src= ../candidates/pix/" + candidatePix[14] + ">"; 
