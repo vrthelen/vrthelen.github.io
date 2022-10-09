@@ -28,7 +28,7 @@ for (i = 0; i < nameArray.length; i++) {
 function quote() {
     let sName = document.querySelector('#aname').value;
     if (classObject.hasOwnProperty(sName) == true) {
-        document.querySelector('#image').innerHTML += "<img src=pix/" + nameArray[i] + ".jpg></img>";
+        document.querySelector('#image').innerHTML = '<img src="pix/' + nameArray[i] + '.jpg"></img>';
         document.querySelector('#aboutme').innerHTML = classObject[sName];
     } else document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
 }
