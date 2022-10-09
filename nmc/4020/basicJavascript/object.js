@@ -26,9 +26,9 @@ let nameArray =["AlexW","AlexC","Allison","Amy","Andrea","AnnaGrace","Brandon","
 function quote(){
     let sName = document.querySelector("#aname").value;
     if (classObject.hasOwnProperty(sName) == true) {
-        document.querySelector("#aboutme").innerHTML = classObject[sName];
+        document.querySelector('#aboutme').innerHTML = classObject[sName];
     }
-    else document.querySelector("#aboutme").innerHTML = sName + " is not in the class";
+    else document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
 }
 
 
