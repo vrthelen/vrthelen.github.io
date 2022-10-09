@@ -19,19 +19,18 @@ let classObject = {"AlexW": "I am the oldest of two boys, two girls; two redhead
 "Tyler": "I currently hold 5 national records in swimming for the country Bermuda."}
  
 let nameArray =["AlexW","AlexC","Allison","Amy","Andrea","AnnaGrace","Brandon","Cydney","Elizabeth","Grant","Haleigh","Hua","Jenny","Kaitlyn","McKenzie ","Melissa","Morgan","Niambi","Tyler"];
-let nameList = document.querySelector('#aname');
+let nameList = document.querySelector("#aname");
 for (i=0; i < nameArray.length; i++) {
     nameList.innerHTML += "<option value=" + nameArray[i] + ">" + nameArray[i] + "</option>";
 }
 
 
-function quote(){
+function quote() {
     let sName = document.querySelector('#aname').value;
     if (classObject.hasOwnProperty(sName) == true) {
         document.querySelector('#image').innerHTML += "<img src=pix/" + nameArray[i] + ".jpg></img>";
         document.querySelector('#aboutme').innerHTML = classObject[sName];
-    }
-    else document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
+    } else document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
 }
 
 
