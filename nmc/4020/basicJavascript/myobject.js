@@ -5,9 +5,6 @@ let myObject = {"Coffee" : "I drink it out of necessity",
 "Soda" : "Not fit for human consumption honestly"}
 
 function showOpinion() {
-    
-    if (myObject.hasOwnProperty(sName) == true) {
-        document.querySelector('#image').innerHTML += "<img src=pix/" + nameArray[i] + ".jpg></img>";
-        document.querySelector('#aboutme').innerHTML = classObject[sName];
-    } else document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
+    let chosenOption = document.querySelector('#options').value;
+    document.querySelector('#aboutme').innerHTML = classObject[chosenOption];
 }
