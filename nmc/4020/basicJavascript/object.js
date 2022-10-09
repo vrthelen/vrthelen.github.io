@@ -22,7 +22,6 @@ let nameArray =["AlexW","AlexC","Allison","Amy","Andrea","AnnaGrace","Brandon","
 let nameList = document.querySelector('#aname');
 for (i=0; i < nameArray.length; i++) {
     nameList.innerHTML += "<option value=" + nameArray[i] + ">" + nameArray[i] + "</option>";
-
 }
 
 
