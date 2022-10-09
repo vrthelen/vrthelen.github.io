@@ -26,7 +26,7 @@ for (i=0; i < nameArray.length; i++) {
 
 
 function quote(){
-    let sName = longlist.value;
+    let sName = nameList.value;
     if (classObject.hasOwnProperty(sName) == true) {
         document.querySelector('#aboutme').innerHTML = classObject[sName];
     }
