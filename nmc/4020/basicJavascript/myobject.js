@@ -1,10 +1,10 @@
-let myObject = {"Coffee" : "I drink it out of necessity",
-"Tea" : "The best drink",
-"Milk" : "Put it in things or put things in it",
-"Water" : "My favorite drink",
-"Soda" : "Not fit for human consumption honestly"}
+let myObject = {"AlexW": "I am the oldest of two boys, two girls; two redheads, two blondes; two left-handers, two right-handers. ",
+"AlexC": " My beard is thicker than this photo shows. I need new pictures :-(",
+"Allison": "I write about peanuts. ",
+"Amy": " I like mint tea and taking pictures!",
+"Andrea": "Let me think about it"}
 
-for (i = 0; i < myObject.length; i++) {
+for (i = 0; i < 5; i++) {
     document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion("+i+")>Click me for "+(i+1)+"</button>";
 }
 
