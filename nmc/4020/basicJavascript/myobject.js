@@ -5,7 +5,7 @@ let myObject = {"Coffee" : "I drink it out of necessity",
 "Soda" : "Not fit for human consumption honestly"}
 
 for (i = 0; i < myObject.length; i++) {
-    document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion(i)>Click me</button>";
+    document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion("+i+")>Click me for "+(i+1)+"</button>";
 }
 
 function showOpinion(num) {
