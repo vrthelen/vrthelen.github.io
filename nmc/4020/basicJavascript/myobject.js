@@ -4,7 +4,9 @@ let myObject = {"Coffee" : "I drink it out of necessity",
 "Water" : "My favorite drink",
 "Soda" : "Not fit for human consumption honestly"}
 
-document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion()>Click me</button>";
+for (i = 0; i < myObject.length; i++) {
+    document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion(i)>Click me</button>";
+}
 
 function showOpinion(num) {
     let chosenOption = document.querySelector('#options').value;
