@@ -6,5 +6,5 @@ let myObject = {"Coffee" : "I drink it out of necessity",
 
 function showOpinion() {
     let chosenOption = document.querySelector('#options').value;
-    document.querySelector('#aboutme').innerHTML = classObject[chosenOption];
+    document.querySelector('#aboutme').innerHTML = myObject[chosenOption];
 }
