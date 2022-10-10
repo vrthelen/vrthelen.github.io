@@ -5,7 +5,7 @@ let myObject = {"AlexW": "I am the oldest of two boys, two girls; two redheads, 
 "Andrea": "Let me think about it"}
 
 for (i = 0; i < 5; i++) {
-    document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion("+i+")>Click me for "+(i+1)+"</button>";
+    document.querySelector('#buttons').innerHTML += "<button onclick=showOpinion('"+i+"')>Click me for "+(i+1)+"</button>";
 }
 
 function showOpinion(num) {
