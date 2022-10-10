@@ -18,6 +18,7 @@ let classObject = {"AlexW": "I am the oldest of two boys, two girls; two redhead
 "Niambi": "I was born in New York.",
 "Tyler": "I currently hold 5 national records in swimming for the country Bermuda."}
  
+
 let nameArray =["AlexW","AlexC","Allison","Amy","Andrea","AnnaGrace","Brandon","Cydney","Elizabeth","Grant","Haleigh","Hua","Jenny","Kaitlyn","McKenzie ","Melissa","Morgan","Niambi","Tyler"];
 let nameList = document.querySelector("#aname");
 for (i = 0; i < nameArray.length; i++) {
