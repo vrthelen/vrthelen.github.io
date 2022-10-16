@@ -78,3 +78,4 @@ var asteroid = {
 "sentry_data": "https://api.nasa.gov/neo/rest/v1/neo/sentry/3012393?api_key=6GkozFBru8KqBfF32aHkxtVoL1QpwAsDWU5T5ltz"
 }
 
+document.querySelector('#asteroid').innerHTML = asteroid.name;
