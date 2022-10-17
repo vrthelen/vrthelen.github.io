@@ -6,6 +6,7 @@ function shuffle() {
     for (var i = 0; i <5; i++) {
         let outcome = Math.floor(Math.random() * 52);
         deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
+        cards.splice(outcome , 1); 
         $(function() {
             $('img').draggable();
             })
