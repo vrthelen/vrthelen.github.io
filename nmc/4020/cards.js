@@ -4,6 +4,7 @@ var disposed = [];
 
 
 function shuffle() {
+    data.innerHTML = "";
     deck.innerHTML = "";
     for (var i = 0; i <5; i++) {
         let outcome = Math.floor(Math.random() * cards.length);
