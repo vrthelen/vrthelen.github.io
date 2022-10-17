@@ -8,7 +8,11 @@ function shuffle() {
     deck.innerHTML = "";
     for (var i = 0; i <5; i++) {
         let outcome = Math.floor(Math.random() * cards.length);
-        deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
+        if (cards[outcome] != undefined) {
+            deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
+        } else {
+            data.innerHTML += "You are out of cards!"
+        }
         data.innerHTML += cards[outcome]+" outcome:"+outcome+" ... ";
         if (cards[outcome] != undefined) {
             disposed.push(cards[outcome]);
