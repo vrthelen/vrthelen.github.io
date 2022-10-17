@@ -3,7 +3,7 @@ var cards = ["10C.jpg","10D.jpg","10H.jpg","10S.jpg","2C.jpg","2D.jpg","2H.jpg",
 
 function shuffle() {
     let outcome = Math.floor(Math.random() * 52);
-    deck.innerHTML = outcome;
+    deck.innerHTML = "<img src=cards/"+cards[outcome]+">";
 
 }
 
