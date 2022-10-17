@@ -249,9 +249,9 @@ let articles = [
 }
 ]
 
-let articlePage = document.querySelector('#articlePage');
+let article = document.querySelector('#article');
 
-for (let i=0; i<articles.length; i++) {
+for (var i = 0; i < articles.length; i++) {
     addInfo(i); 
 }
 
