@@ -27,7 +27,24 @@ function shuffle() {
 }
 function shuffle2() {
     deck2.innerHTML = "";
-
+    for (var i = 0; i <5; i++) {
+        let outcome = Math.floor(Math.random() * cards.length);
+        if (cards[outcome] != undefined) {
+            deck2.innerHTML += "<img src=cards/"+cards[outcome]+">";
+        } else {
+            data2.innerHTML = "You are out of cards!"
+        }
+        if (cards[outcome] != undefined) {
+            disposed.push(cards[outcome]);
+        }
+        cards.splice(outcome , 1); 
+        $(function() {
+            $('img').draggable();
+            })
+        $('img').dblclick(function() {
+            $(this).css("display", "none");
+            })
+    }
 }
 function show() {
     for (var i = 0; i < cards.length; i++) {
