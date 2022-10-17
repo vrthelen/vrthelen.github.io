@@ -256,7 +256,7 @@ function generate(num) {
     + articles[num].url + "><h2>" + articles[num].title + "</h2></a>" + 
     "<h3>" + ((articles[num].description != null) ? (articles[num].description) : ("")) 
     + "</h3></div><div class='pictures'>" + ((articles[num].urlToImage != null) ? "<img src='" 
-    + (articles[num].urlToImage + "'>") : (<p>No image found!</p>)) + "</div> </div> </div>";
+    + (articles[num].urlToImage + "'>") : ("No image found!")) + "</div> </div> </div>";
 }
 
 for (var i = 0; i < articles.length; i++) {
