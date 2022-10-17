@@ -4,7 +4,7 @@ var cards = ["10C.jpg","10D.jpg","10H.jpg","10S.jpg","2C.jpg","2D.jpg","2H.jpg",
 function shuffle() {
     deck.innerHTML = "";
     for (var i = 0; i <5; i++) {
-        let outcome = Math.floor(Math.random() * 52);
+        let outcome = Math.floor(Math.random() * cards.length);
         deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
         cards.splice(outcome , 1); 
         $(function() {
