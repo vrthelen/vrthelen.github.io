@@ -248,6 +248,7 @@ let articles = [
             content: "Comienza de forma oficial la pretemporada de F1, que estará dividida en dos semanas y que se reduce en dos días (sólo seis jornadas) respecto a las ocho de años anteriores. En 2020 será más importante que nunca empezar sin contratiempos y no encontrar un prob… [+4420 chars]"
 }
 ]
+
 let article = document.querySelector('#article');
 function generate(num) {
     article.innerHTML += 
