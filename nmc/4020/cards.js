@@ -20,7 +20,7 @@ function shuffle() {
 }
 function show() {
     for (var i = 0; i < cards.length; i++) {
-        array.innerHTML += cards[i];
+        array.innerHTML += cards[i] + ", ";
     }
 
 }
