@@ -4,7 +4,7 @@ var disposed = [];
 
 
 function shuffle() {
-    
+    number.innerHTML=
     data.innerHTML = "";
     deck.innerHTML = "";
     for (var i = 0; i <5; i++) {
