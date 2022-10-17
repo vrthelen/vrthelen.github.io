@@ -26,6 +26,10 @@ function shuffle() {
             })
     }
 }
+function shuffle2() {
+    deck2.innerHTML = "";
+    
+}
 function show() {
     for (var i = 0; i < cards.length; i++) {
         array.innerHTML += cards[i] + ", ";
