@@ -18,6 +18,15 @@ function shuffle() {
             })
     }
 }
+function show() {
+    for (var i = 0; i < cards.length; i++) {
+        array.innerHTML += cards[i];
+    }
+
+}
+function resetshow() {
+    array.innerHTML = "";
+}
 
 function addback() {
     for (var i = 0; i < disposed.length; i++) {
