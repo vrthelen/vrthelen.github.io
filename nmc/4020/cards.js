@@ -27,6 +27,7 @@ function shuffle() {
     }
 }
 function shuffle2() {
+    number.innerHTML = "Cards remaining in deck: " + cards.length;
     deck2.innerHTML = "";
     for (var i = 0; i <5; i++) {
         let outcome = Math.floor(Math.random() * cards.length);
