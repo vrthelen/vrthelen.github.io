@@ -10,7 +10,9 @@ function shuffle() {
         let outcome = Math.floor(Math.random() * cards.length);
         deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
         data.innerHTML += cards[outcome]+" outcome:"+outcome+" ... ";
-        disposed.push(cards[outcome]);
+        if !(cards[outcome] == undefined) {
+            disposed.push(cards[outcome]);
+        }
         cards.splice(outcome , 1); 
         $(function() {
             $('img').draggable();
