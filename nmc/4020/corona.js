@@ -248,13 +248,11 @@ let articles = [
             content: "Comienza de forma oficial la pretemporada de F1, que estará dividida en dos semanas y que se reduce en dos días (sólo seis jornadas) respecto a las ocho de años anteriores. En 2020 será más importante que nunca empezar sin contratiempos y no encontrar un prob… [+4420 chars]"
 }
 ]
-
 let article = document.querySelector('#article');
+function generate(number) {
+    article.innerHTML += "<div class='container'> <div class='hBox'> <div class='vBox'> <a href = " + articles[number].url + "><h2>" + articles[number].title + "</h2></a>" + "<h3>" + ((articles[number].description != null) ? (articles[number].description) : ("")) + "</h3></div><div class='pictures'>" + ((articles[number].urlToImage != null)? "<img src='" + (articles[number].urlToImage + "'>") : ("")) + "</div> </div> </div>";
+}
 
 for (var i = 0; i < articles.length; i++) {
     generate(i); 
-}
-
-function generate(number) {
-    article.innerHTML += "<div class='container'> <div class='hBox'> <div class='vBox'> <a href = " + articles[number].url + "><h2>" + articles[number].title + "</h2></a>" + "<h3>" + ((articles[number].description != null) ? (articles[number].description) : ("")) + "</h3></div><div class='pictures'>" + ((articles[number].urlToImage != null)? "<img src='" + (articles[number].urlToImage + "'>") : ("")) + "</div> </div> </div>";
 }
