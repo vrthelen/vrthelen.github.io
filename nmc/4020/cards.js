@@ -63,8 +63,12 @@ function addback() {
     }
 }
 
-function discard() {
-    deck.innerHTML = "";
+function discard(decknum) {
+    if (decknum == 1) {
+        deck.innerHTML = "";
+    } else {
+        deck2.innerHTML = "";
+    }
 }
 
 function reset() {
