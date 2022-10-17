@@ -6,6 +6,7 @@ function shuffle() {
         let outcome = Math.floor(Math.random() * 52);
         deck.innerHTML = "<img src=cards/"+cards[outcome]+">";
     }
+    
 
 }
 
