@@ -11,7 +11,7 @@ function shuffle() {
         if (cards[outcome] != undefined) {
             deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
         } else {
-            data.innerHTML += "You are out of cards!"
+            data.innerHTML = "You are out of cards!"
         }
         data.innerHTML += cards[outcome]+" outcome:"+outcome+" ... ";
         if (cards[outcome] != undefined) {
