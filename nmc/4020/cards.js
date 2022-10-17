@@ -8,6 +8,7 @@ function shuffle() {
     for (var i = 0; i <5; i++) {
         let outcome = Math.floor(Math.random() * cards.length);
         deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
+        data.innerHTML += cards[outcome]+" ... ";
         disposed.push(cards[outcome]);
         cards.splice(outcome , 1); 
         $(function() {
