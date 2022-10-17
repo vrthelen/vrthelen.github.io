@@ -80,4 +80,4 @@ var asteroid = {
 
 let hitOrMiss = asteroid.is_potentially_hazardous_asteroid.valueOf? "miss striking Earth" : "hit Earth";
 document.querySelector('#asteroid').innerHTML = "The asteroid named " + asteroid.name + " is between " + asteroid.estimated_diameter.miles.estimated_diameter_min + " and " + asteroid.estimated_diameter.miles.estimated_diameter_max + " miles wide, and will " + hitOrMiss + " by approximately " + asteroid.close_approach_data[0].miss_distance.miles + " miles.";
-document.querySelector('#asteroid').innerHTML += "<br><a href="" + asteroid.links.self + "">Link to asteroid!</a>";
+document.querySelector('#asteroid').innerHTML += "<br><a href='" + asteroid.links.self + "'>Link to asteroid!</a>";
