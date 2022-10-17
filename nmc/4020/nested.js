@@ -78,6 +78,6 @@ var asteroid = {
 "sentry_data": "https://api.nasa.gov/neo/rest/v1/neo/sentry/3012393?api_key=6GkozFBru8KqBfF32aHkxtVoL1QpwAsDWU5T5ltz"
 }
 
-document.querySelector('#asteroid').innerHTML = "The asteroid named " + asteroid.name + " is between " + asteroid.estimated_diameter.miles.estimated_diameter_min + " and " + asteroid.estimated_diameter.miles.estimated_diameter_max + " miles wide, and will " + asteroid.is_potentially_hazardous_asteroid.valueOf + " by approximately " + asteroid.close_approach_data[0].miss_distance.miles + " miles.";
+document.querySelector('#asteroid').innerHTML = "The asteroid named " + asteroid.name + " is between " + asteroid.estimated_diameter.miles.estimated_diameter_min + " and " + asteroid.estimated_diameter.miles.estimated_diameter_max + " miles wide, and will miss striking Earth by approximately " + asteroid.close_approach_data[0].miss_distance.miles + " miles.";
 document.querySelector('#asteroid').innerHTML += "<br><a href='" + asteroid.links.self + "'>Link to asteroid!</a>";
 
