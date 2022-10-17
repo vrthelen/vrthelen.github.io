@@ -252,9 +252,9 @@ let articles = [
 let article = document.querySelector('#article');
 
 for (var i = 0; i < articles.length; i++) {
-    addInfo(i); 
+    generate(i); 
 }
 
-function addInfo(number) {
+function generate(number) {
     article.innerHTML += "<div class='container'> <div class='hBox'> <div class='vBox'> <a href = " + articles[number].url + "><h2>" + articles[number].title + "</h2></a>" + "<h3>" + ((articles[number].description != null) ? (articles[number].description) : ("")) + "</h3></div><div class='pictures'>" + ((articles[number].urlToImage != null)? "<img src='" + (articles[number].urlToImage + "'>") : ("")) + "</div> </div> </div>";
 }
