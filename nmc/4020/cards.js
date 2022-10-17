@@ -8,7 +8,10 @@ function shuffle() {
         deck.innerHTML += "<img src=cards/"+cards[outcome]+">";
         $(function() {
             $('img').draggable();
-        })
+            })
+        $('img').dblclick(function() {
+            $(this).css("display", "none");
+            })
     }
 
 
