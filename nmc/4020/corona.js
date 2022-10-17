@@ -249,3 +249,12 @@ let articles = [
 }
 ]
 
+let articlePage = document.querySelector('#articlePage');
+
+for (let i=0; i<articles.length; i++) {
+    addInfo(i); 
+}
+
+function addInfo(number) {
+    article.innerHTML += "<div class='container'> <div class='horBox'> <div class='vertBox'> <a href = " + articles[number].url + "><h2>" + articles[number].title + "</h2></a>" + "<h3>" + ((articles[number].description != null) ? (articles[number].description) : ("")) + "</h3></div><div class='pictures'>" + ((articles[number].urlToImage != null)? "<img src='" + (articles[number].urlToImage + "'>") : ("")) + "</div> </div> </div>";
+}
