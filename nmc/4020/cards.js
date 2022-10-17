@@ -13,7 +13,6 @@ function shuffle() {
         } else {
             data.innerHTML = "You are out of cards!"
         }
-        data.innerHTML += cards[outcome]+" outcome:"+outcome+" ... ";
         if (cards[outcome] != undefined) {
             disposed.push(cards[outcome]);
         }
@@ -28,7 +27,7 @@ function shuffle() {
 }
 function shuffle2() {
     deck2.innerHTML = "";
-    
+
 }
 function show() {
     for (var i = 0; i < cards.length; i++) {
