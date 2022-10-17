@@ -255,7 +255,7 @@ function generate(num) {
     "<div class='container'> <div class='hBox'> <div class='vBox'> <a href = " 
     + articles[num].url + "><h2>" + articles[num].title + "</h2></a>" + 
     "<h3>" + ((articles[num].description != null) ? (articles[num].description) : (articles[num].content)) 
-    + "</h3></div><div class='pictures'>" + ((articles[num].urlToImage != null) ? "<img src='" 
+    + "</h3></div><div class='pics'>" + ((articles[num].urlToImage != null) ? "<img src='" 
     + (articles[num].urlToImage + "'>") : ("No image found!")) + "</div> </div> </div>";
 }
 
