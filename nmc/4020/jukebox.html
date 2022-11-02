@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <style>
+        @font-face {
+            font-family: Cheltenham Condensed Regular;
+            src: url(CheltenhamCondensedRegular.ttf);
+        }
+        audio {
+            height:0%;
+            width:0%;
+        }
+        body {
+            background-color: #4A3728;
+            font-family: Cheltenham Condensed Regular;
+        }
+        #all {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 5px;
+            align-content: space-evenly;
+            padding-left: 215px;
+            padding-top: 100px;
+        }
+        #middle {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        #firsthalf {
+            padding-right: 100px;
+        }
+        #secondhalf {
+            padding-left: 100px;
+        }
+        #firsthalf input {
+            font-family: Cheltenham Condensed Regular;
+            width: 200px;
+            background-color: pink;
+            border-color: white;
+            margin: 5px;
+        }
+        #secondhalf input {
+            font-family: Cheltenham Condensed Regular;
+            width: 200px;
+            background-color: pink;
+            border-color: white;
+            margin:5px;
+        }
+        #middle input {
+            font-family: Cheltenham Condensed Regular;
+            width: 60px;
+            background-color: pink;
+            border-color: white;
+            margin:9px;
+        }
+        h1 {
+            font-size: 4rem;
+            font-style: italic;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!--<button onclick="player('songs/oblivion.m4a')">play song</button>
+    <div id="juke">-->
+        <h1>Jukebox ♬</h1>
+    <div id="all">
+        <div id="firsthalf">
+            <div id="song1"><input type="button" id="songone" value="OBLIVION" onclick="playSong(1, 'songs/oblivion.m4a')" /></div>
+            <div id="song2"><input type="button" id="songtwo" value="ZITTI E BUONI" onclick="playSong(2, 'songs/zittiebuoni.m4a')" /></div>
+            <div id="song3"><input type="button" id="songthree" value="FAMOUS BLUE RAINCOAT" onclick="playSong(3, 'songs/famousblueraincoat.m4a')" /></div>
+        </div>
+        <div id="middle">
+            <div id="pausebutton"><input type="button" id="pausesong" value="PAUSE" onclick="pauseAudio()" /></div>
+            <div id="playbutton"><input type="button" id="playsong" value="PLAY" onclick="playAudio()" /></div>
+            <div id="stopbutton"><input type="button" id="stopsong" value="STOP" onclick="stopAudio()" /></div>
+        </div>
+        <div id="secondhalf">
+            <div id="song4"><input type="button" id="songfour" value="I NEVER TOLD YOU" onclick="playSong(4, 'songs/inevertoldyouwhatidoforaliving.m4a')" /></div>
+            <div id="song5"><input type="button" id="songfive" value="LITHIUM" onclick="playSong(5, 'songs/lithium.m4a')" /></div>
+            <div id="song6"><input type="button" id="songsix" value="PACHKA SIGARET" onclick="playSong(6, 'songs/pachkasigaret.m4a')" /></div>
+        </div>
+    </div>
+</body>
+</html>
+<script src = "jukebox.js"></script>
