@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Question Trivia</title>
+    <title>Trivia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        button {
+            border-radius: 12px;
+        }
+        .button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Trivia</h1>
+    <div id="questions">
+        <button onclick="questionanswer()">New Question</button>
+        <div id="category"></div>
+        <div id="question"></div><br>
+    </div>
+    <div id="answers">
+        <button onclick="showAnswer()">Show Answer</button><br>
+        <div id="answer"></div>
+    </div>
 </body>
 </html>
+
+<script>
+    var question = document.querySelector("#question");
+    var answer = document.querySelector("#answer");
+    var category = document.querySelector("#category");
+    var theAnswer = "";
+
+    function questionanswer() {
+        $.getJSON('https://jservice.io/api/random', function(data) {
+            question.innerHTML = data[0].question;
+            category.innerHTML = "Category: " + data[0].category.title;
+            theAnswer = "Answer: " + data[0].answer;
+        });
+    }
+    function showAnswer() {
+        answer.innerHTML = theAnswer;
+    }
+</script>
