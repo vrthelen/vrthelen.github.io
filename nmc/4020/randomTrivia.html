@@ -17,7 +17,7 @@
     var category = document.querySelector("#category");
     var theAnswer = "";
 
-    function qa() {
+    function questionanswer() {
         $.getJSON('https://jservice.io/api/random', function(data) {
             question.innerHTML = data[0].question;
             category.innerHTML = "Category: " + data[0].category.title;
