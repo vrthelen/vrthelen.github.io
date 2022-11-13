@@ -45,7 +45,9 @@
            
         });
     }
-    function showAnswer() {
-        answer.innerHTML = theAnswer;
+    function showAnswer(b) {
+        let whatever = "#answers"+b;
+        whatever = document.querySelector(whatever);
+        whatever.innerHTML= "<b>The answer is " + theAnswer[b]+"</b>";
     }
 </script>
