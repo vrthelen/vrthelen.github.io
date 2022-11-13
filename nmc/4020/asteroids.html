@@ -40,7 +40,6 @@
     $( document ).ready(function() {  
         $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=bwaUw8sEVRX4TjeJCbXaM0Ce56d5DVEhAy8ZU3Ub', function(data) { 
             var howMany = data.near_earth_objects.length;
-            //$('#count').html(howMany);
             let dataSource = data.near_earth_objects;
             for (var i=0; i<dataSource.length; i++) {
                 let maxWidth = dataSource[i].estimated_diameter.kilometers.estimated_diameter_max*10;
