@@ -21,6 +21,9 @@
     <div id="questions">
         <button onclick="questionanswer()">Load new question set</button>
     </div>
+    <div id="maindiv">
+
+    </div>
 </body>
 </html>
 
@@ -29,6 +32,7 @@
     var answer = document.querySelector("#answer");
     var category = document.querySelector("#category");
     var theAnswer = "";
+    var divLoad = document.querySelector("#maindiv");
 
     function questionanswer() {
         $.getJSON('https://jservice.io/api/random', function(data) {
