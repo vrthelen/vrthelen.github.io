@@ -38,7 +38,7 @@
     let asteroidDisplay = document.querySelector('body');
 
     $( document ).ready(function() {  
-        $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=UsRDPrM4wNngVejZUENoJSPFAeTaJaWvlDxx01Xi', function(data) { 
+        $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=bwaUw8sEVRX4TjeJCbXaM0Ce56d5DVEhAy8ZU3Ub', function(data) { 
             var howMany = data.near_earth_objects.length;
             //$('#count').html(howMany);
             let dataSource = data.near_earth_objects;
