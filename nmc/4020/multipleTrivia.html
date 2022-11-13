@@ -39,7 +39,7 @@
         theAnswer = [];
         $.getJSON('https://jservice.io/api/random?count=10', function(data) {
             for(let i=0; i<10; i++) {
-                divLoad.innerHTML += "<div class='question'><h3>Category: " + data[i].category.title + "</h3>" + "<button onclick='showAnswer(" + i + ")'>Show Answer</button>" + "<h5>" + data[i].question + "</h5>" + "<div id='damnAnswer" + i + "'></div>" + "</div>";
+                divLoad.innerHTML += "<div class='question'><h3>Category: " + data[i].category.title + "</h3>" + "<button onclick='showAnswer(" + i + ")'>Show Answer</button>" + "<h5>" + data[i].question + "</h5>" + "<div id='answers" + i + "'></div>" + "</div>";
                 theAnswer.push(data[i].answer);
             }
         });
