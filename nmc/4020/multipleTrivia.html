@@ -39,7 +39,10 @@
             divLoad.innerHTML ="";
             for (i=0;i<10;i++) {
                 divLoad.innerHTML += "<h3>Category: "+data[i].category.title+"</h3>";
+                divLoad.innerHTML += "<div id= 'answers"+i+"'></div>"
+                theAnswer.push(data[i].answer);
             }
+           
         });
     }
     function showAnswer() {
