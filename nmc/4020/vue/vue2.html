@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 2</title>
+    
+</head>
+<body>
+    <div id="us">
+        <select v-model="oswald" v-on:change="displayImage()"> 
+            <option v-for="eachStudent in yall" :value="dompart1+eachStudent.domain+dompart2">{{eachStudent.stu_name}}</option>
+            <p>{{oswald}}</p> underneath </select>
+        </select></br>
+        <img :src="image"/>
+    </div>
+    <div id="cats">
+        <select v-model="catPicsName" v-on:change="displayImage()"> 
+            <option v-for="eachCat in catPics" :value="eachCat.url">{{eachCat.id}}</option>
+        </select></br>
+        <img :src="image">
+    </div>
+</body>
+</html>
+<script src="youguys.js"></script>
+<script src="cats.js"></script>
