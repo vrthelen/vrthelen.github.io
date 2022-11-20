@@ -9,10 +9,21 @@
 </head>
 
 <body>
-    <div id="app" v-on:load="showme">
-  
-</div>
-   
+    <div id="app">
+        <button v-on:click="showme('cocker')">Cocker</button>
+        <button v-on:click="showme('blenheim')">Blenheim</button>
+        <button v-on:click="showme('brittany')">Brittany</button>
+        <button v-on:click="showme('irish')">Irish</button>
+        <button v-on:click="showme('japanese')">Japanese</button>
+        <button v-on:click="showme('sussex')">Sussex</button>
+        <button v-on:click="showme('welsh')">Welsh</button>
+
+        <div v-for="theBreed in moreData">
+            <a :href="theBreed">
+                <img :src="theBreed">
+            </a>
+        </div>
+    </div>
 </body>
 </html>
 <script src="dogApi.js"></script>
