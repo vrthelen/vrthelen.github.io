@@ -18,10 +18,9 @@
         <button v-on:click="showme('sussex')">Sussex</button>
         <button v-on:click="showme('welsh')">Welsh</button>
 
-        <div v-for="theBreed in moreData">
-            <a :href="theBreed">
-                <img :src="theBreed">
-            </a>
+        <p><button v-on:click="slider(1)">forwards</button></p>
+        <p><button v-on:click="slider(-1)">backwards</button></p>
+        <img :src="whichDawg">
         </div>
     </div>
 </body>
