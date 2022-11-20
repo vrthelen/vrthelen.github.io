@@ -533,8 +533,11 @@ var studentdata = new Vue({
         }
     },
     computed: {
-        image() {return
-            "http://"+this.yall[this.counter].domain+"/images/me.jpg";
+        image() {
+            return "http://" + this.yall[this.counter].domain + "/images/me.jpg";
+        },
+        quote() {
+            return this.yall[this.counter].fact
         }
     }
 })
