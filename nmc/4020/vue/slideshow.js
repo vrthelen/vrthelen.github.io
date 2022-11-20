@@ -12,7 +12,6 @@ new Vue({
     },
     mounted: function mounted() {
         this.showme('cocker')
-
     },
 
     methods: {
