@@ -1,6 +1,6 @@
 Vue.component('toast', {
     template:
-    '<button v-on:click="checkToast" >check the toast</button> <h3>The toast is {{toastState}} </h3>'
+    '<div><button v-on:click="checkToast" >check the toast</button> <h3>The toast is {{toastState}} </h3></div>'
 })
 
 var co = new Vue({
