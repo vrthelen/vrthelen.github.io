@@ -526,10 +526,11 @@ var studentdata = new Vue({
                 "counter": "172"
             }
         ]
-
-
-
-
+    },
+    methods: {
+        showImage(index){
+            this.counter = index
+        }
     },
     computed: {
         image() {return
