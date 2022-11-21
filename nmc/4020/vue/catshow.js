@@ -2,7 +2,7 @@ new Vue({
     el: '#bobcat',
     data: {
         image: "",
-        whichcat: "abys",
+        whichcat: "manx",
         thename: "",
         allofit: [],
         i: 0,
