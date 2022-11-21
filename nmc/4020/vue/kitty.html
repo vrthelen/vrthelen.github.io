@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="">
 
@@ -6,13 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        #app {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 15px;
+        }
+    </style>
     <title>Cat Stuff</title>
 </head>
 
 <body>
     <div id="app">
-
-
+        <div class="kitty" v-for="eachCat in breeds">
+            <h2>{{eachCat.name}}</h2>
+            <p>{{eachCat.description}}</p>
+            <p>Temperament: {{eachCat.temperament}}</p>
+            <div class="picnstat">
+                <img :src="eachCat.url">
+                <div class="stats">
+                    <p>Indoor Cat: {{eachCat.indoor==1?"True":"False"}}</p>
+                    <p>Natural Breed: {{eachCat.natural==1?"True":"False"}}</p>
+                    <p>Country of Orgin: {{eachCat.origin}}</p>
+                    <p>Life Span: {{eachCat.life}} years</p>
+                    <div class="shedda" :style="{'background' : sheddingLevel(eachCat.shedding) }">Shedding Level</div>
+                    <div class="shedda" :style="{'background' : sheddingLevel(eachCat.intelligence) }">Intelligence Level</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
