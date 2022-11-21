@@ -6,18 +6,25 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
         img {width: 500px;}
-        button{width: 80px; background-color: grey;color:white;padding: 8px;border-radius: 12px;border: solid black 4px;} </style>
+    </style>
 </head>
 
 <body>
+    
     <div id="bobcat">
-        <h2>{{thename}}</h2>
-        <h2>Adaptability Score: {{adapt}}</h2>
-        <button v-on:click="slideshow()">slideshow</button><br><br>
-   
-        <img :src="image.url"><br>
+        <div id="buttons">
+            <button id="button1" @click="changeCat(1)">Himalayan</button>
+            <button id="button2" @click="changeCat(2)">Scottish Fold</button>
+            <button id="button3" @click="changeCat(3)">Turkish Angora</button>
+            <button id="button4" @click="changeCat(4)">Munchkin</button>
+            <button id="button5" @click="changeCat(5)">Korat</button>
+        </div>
+        <cat v-if="show1" id="cat1" catname="hima"></cat>
+        <cat v-if="show2" id="cat2" catname="sfol"></cat>
+        <cat v-if="show3" id="cat3" catname="tang"></cat>
+        <cat v-if="show4" id="cat4" catname="munc"></cat>
+        <cat v-if="show5" id="cat5" catname="kora"></cat>
     </div>
-
 
 </body>
     <script src="catshow.js"></script>
