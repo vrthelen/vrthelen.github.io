@@ -27,11 +27,9 @@ new Vue({
             if (this.selector < 0 ) {
                 this.selector = this.moreData.length;
             }
-
             if (this.selector > this.moreData.length) {
                 this.selector = 0;
             }
-
             if (num == 1) {
                 this.whichDawg = this.moreData[this.selector];
                 this.selector++;
