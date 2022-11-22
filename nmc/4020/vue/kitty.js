@@ -44,7 +44,5 @@ new Vue({
                 return "darkred";
             }
         }
-    },
-    computed: {
     }
 })
