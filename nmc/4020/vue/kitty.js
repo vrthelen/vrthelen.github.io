@@ -22,7 +22,7 @@ new Vue({
                     catObj.natural = this.catArray[i].natural;
                     catObj.intelligence = this.catArray[i].intelligence;
                     catObj.shedding = this.catArray[i].shedding_level;
-                    catObj.life = this.catArray[i].life_span;
+                    catObj.voc = this.catArray[i].vocalisation;
                     catObj.origin = this.catArray[i].origin;
                     this.breeds.push(catObj);
                 }
