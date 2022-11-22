@@ -33,6 +33,7 @@ new Vue({
             if (num == 1) {
                 this.whichDawg = this.moreData[this.selector];
                 this.selector++;
+                console.log(this.selector)
             } else {
                 this.whichDawg = this.moreData[this.selector];
                 this.selector--;
