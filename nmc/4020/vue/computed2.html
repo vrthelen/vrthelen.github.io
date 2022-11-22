@@ -20,7 +20,8 @@
         <div id="container">
             <ul>
                 <li  v-for="(eachStudent,index) in yall" 
-                @mouseover="showImage(index)">
+                @mouseover="showImage(index)"
+                @mouseover="showQuote(index)">
                     {{eachStudent.stu_name}} {{eachStudent.last_name}}</li>
             </ul>
         </div><br>
