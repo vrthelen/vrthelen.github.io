@@ -31,7 +31,7 @@ new Vue({
             }
 
         },
-        sheddingLevel(level) {
+        computeLev(level) {
             if (level == 1) {
                 return "lightgreen";
             } else if (level == 2) {

@@ -33,9 +33,9 @@
                     <p>Indoor Cat: {{eachCat.indoor==1?"True":"False"}}</p>
                     <p>Natural Breed: {{eachCat.natural==1?"True":"False"}}</p>
                     <p>Country of Orgin: {{eachCat.origin}}</p>
-                    <div class="stat" :style="{'background' : sheddingLevel(eachCat.shedding) }">Shedding Level</div>
-                    <div class="stat" :style="{'background' : sheddingLevel(eachCat.intelligence) }">Intelligence Level</div>
-                    <div class="stat" :style="{'background' : sheddingLevel(eachCat.voc) }">Vocal Level</div>
+                    <div class="stat" :style="{'background' : computeLev(eachCat.shedding) }">Shedding Level</div>
+                    <div class="stat" :style="{'background' : computeLev(eachCat.intelligence) }">Intelligence Level</div>
+                    <div class="stat" :style="{'background' : computeLev(eachCat.voc) }">Vocal Level</div>
                 </div>
             </div>
         </div>
