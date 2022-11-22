@@ -23,7 +23,7 @@ new Vue({
             this.moreData = this.info.message;
             this.slider();
         },
-        slider(way) {
+        slider(num) {
             if (this.selector < 0 ) {
                 this.selector = this.moreData.length;
             }
@@ -32,7 +32,7 @@ new Vue({
                 this.selector = 0;
             }
 
-            if (way == 1) {
+            if (num == 1) {
                 this.whichDawg = this.moreData[this.selector];
                 this.selector++;
             } else {
