@@ -17,7 +17,7 @@ new Vue({
                     let catObj = this.catArray[i].image;
                     catObj.name = this.catArray[i].name;
                     catObj.description = this.catArray[i].description;
-                    catObj.temperament = this.catArray[i].temperament;
+                    catObj.aff = this.catArray[i].affection_level;
                     catObj.indoor = this.catArray[i].indoor;
                     catObj.natural = this.catArray[i].natural;
                     catObj.intelligence = this.catArray[i].intelligence;
