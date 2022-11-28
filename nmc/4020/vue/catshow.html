@@ -5,7 +5,66 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-        img {width: 500px;}
+        img {width: 300px;}
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            width: 200px;
+        }
+        button {
+            margin: 20px;
+            padding: 5px;
+            background-color: rgba(181, 145, 215, 0.606);
+            border:0px;
+            border-radius: 10px;
+        }
+        #bobcat {
+            display: flex;
+            flex-direction: row;
+        }
+        #please {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        #catinfo {
+            padding: 20px;
+        }
+        #catpic {
+            padding:20px;
+        }
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: antiquewhite;
+            scroll-behavior: smooth;
+        }
+        .score {
+            background: rgb(181, 145, 215);
+            border:20px;
+            height:10px;
+            padding-top: 20px;
+            margin-left: 10px;
+            border-radius: 10px;
+
+        }
+        #scorebox {
+            display: flex;
+            flex-direction: row;
+            justify-content:baseline;
+        }
+        #words {
+            display: flex;
+            flex-direction: column;
+        }
+        #blocks {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        #explained {
+            padding:20px;
+        }
     </style>
 </head>
 
@@ -13,17 +72,24 @@
     
     <div id="bobcat">
         <div id="buttons">
-            <button id="button1" @click="changeCat(1)">Himalayan</button>
-            <button id="button2" @click="changeCat(2)">Scottish Fold</button>
-            <button id="button3" @click="changeCat(3)">Turkish Angora</button>
-            <button id="button4" @click="changeCat(4)">Munchkin</button>
-            <button id="button5" @click="changeCat(5)">Korat</button>
+            <button id="button2" onclick="changeCat(2)">Scottish Fold</button>
+            <button id="button1" onclick="changeCat(1)">Himalayan</button>
+            <button id="button3" onclick="changeCat(3)">Turkish Angora</button>
+            <button id="button4" onclick="changeCat(4)">Munchkin</button>
+            <button id="button5" onclick="changeCat(5)">Korat</button>
+            <button id="button6" onclick="document.getElementById('explained').scrollIntoView();">Explanation</button>
+            
         </div>
-        <cat v-if="show1" id="cat1" catname="hima"></cat>
-        <cat v-if="show2" id="cat2" catname="sfol"></cat>
-        <cat v-if="show3" id="cat3" catname="tang"></cat>
-        <cat v-if="show4" id="cat4" catname="munc"></cat>
-        <cat v-if="show5" id="cat5" catname="kora"></cat>
+        
+        <cat id="cat1" catname="hima"></cat>
+        <cat id="cat2" catname="sfol"></cat>
+        <cat id="cat3" catname="tang"></cat>
+        <cat id="cat4" catname="munc"></cat>
+        <cat id="cat5" catname="kora"></cat>
+        
+    </div>
+    <div id="explained">
+        <p>Let's go through the processes used in this project. Firstly there is the loadNextImage(breedID) method. This tries to use axios to get an API using the inserted API key. A response variable is set the the API text for the specific breed. This finds all the information we want to format for the project such as the cat's origin, temperament, and custom variables I decided to display. The method also grabs an array of photos for each breed. This is taken by the slideshow() method to go through that array when the button is pressed by the user. This method sets the image to be whatever i is within the array of images, then increments it. If i becomes non-existent within the array (too high) then it is reset.<br>Next, let's examine the structure of the project. Everything is contained within a Vue component, that creates a cat object with a set template. This is the titular Cat Component. It has a property called catname that is a string. This will be the breed ID and determines what cat is loaded up. The template displays all the information that was set up within loadNextImage and slideshow using several divs that display flex to align that content properly. Certain variables with scores are displayed using a styled div taking in the score as a width as was recommended in the instructions.<br>Rambling about some of the challenges I had: I went through a lot of trouble getting the individual cats to display properly. Because of how loadNextImage works (I think), some of these methods were doomed to fail. First, I tried to edit the innerHTML using the buttons to display or hide the cat items. Second, I tried to use v-if statements to show or hide them based on variables (thank you Emuel for your help but even your suggestion did not work! I was baffled and after a couple hours I moved on to the much simpler solution). Third, I tried to use the visibility CSS property of the cat items to collapse and show them. Strangely, it seems that visibility:collapse does not work as intended? It seemed to work like visibility:hidden instead which was not at all what was needed. A recommended alternative was the display property, which is what I ended up using.</p>
     </div>
 
 </body>

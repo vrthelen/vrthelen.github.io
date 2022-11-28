@@ -2,7 +2,7 @@ Vue.component('cat',{
     props: {
         catname: String
     },
-    template: '<div><h2>{{thename}}</h2><button v-on:click="slideshow()">slideshow</button><br><br><img :src="image.url"><br><p>{{description}}</p><p>Temperament: {{temperament}}</p><p>Origin: {{origin}}</p><p>Intelligence score: {{intelligence}}</p><p>Shedding level: {{shedding}}</p><p>Energy level: {{energy_level}}</p><p>Grooming Score: {{grooming}}</p><p>Health issues: {{healthIssues}}</p><p>Adaptability score: {{adapt}}</p></div>',
+    template: '<div id="allcat"><div id="please"><div id="catpic"><h2>{{thename}}</h2><button v-on:click="slideshow()">slideshow</button><br><br><img :src="image.url"></div><div id="catinfo"><br><p>{{description}}</p><p>Temperament: {{temperament}}</p><p>Origin: {{origin}}</p><br><div id="scorebox"><div id="words"><p>Intelligence score: </p><p>Shedding level: </p><p>Energy level: </p><p>Grooming Score:</p><p>Health issues: </p><p>Adaptability score: </p></div><div id="blocks"><div class="score":style="{\'width\':int+\'px\'}"></div><div class="score":style="{\'width\':she+\'px\'}"></div><div class="score":style="{\'width\':ene+\'px\'}"></div><div class="score":style="{\'width\':gro+\'px\'}"></div><div class="score":style="{\'width\':hea+\'px\'}"></div><div class="score":style="{\'width\':ada+\'px\'}"></div></div></div></div></div></div>',
     data() {
         return {
             image: "",
@@ -18,7 +18,14 @@ Vue.component('cat',{
             shedding: 0,
             energy_level: 0,
             grooming: 0,
-            healthIssues: 0
+            healthIssues: 0,
+
+            
+            show1: false,
+            show2: false,
+            show3: false,
+            show4: false,
+            show5: false
         }
     },
     created() {
@@ -60,18 +67,35 @@ Vue.component('cat',{
             }
             this.image = this.allofit[this.i];
             this.i++;
-        },
+        }
+        
+        
     },
+    computed: {
+        ene() {
+            return 50*this.energy_level;
+        },
+        gro() {
+            return 50*this.grooming
+        },
+        int() {
+            return 50*this.intelligence
+        },
+        hea() {
+            return 50*this.healthIssues
+        },
+        ada() {
+            return 50*this.adapt
+        },
+        she() {
+            return 50*this.shedding
+        }
+    }
 })
 
 new Vue({
     el: '#bobcat',
     data: {
-        show1: false,
-        show2: false,
-        show3: false,
-        show4: false,
-        show5: false,
         image: "",
         whichcat: "manx",
         thename: "",
@@ -80,24 +104,40 @@ new Vue({
         adapt: 0
     },
     methods: {
-        changeCat(num) {
-            if (num==1) {
-                show1 = true;
-                console.log(show1);
-            }
-            if (num==2) {
-                show2 = true;
-            }
-            if (num==3) {
-                show3 = true;
-            }
-            if (num==4) {
-                show4 = true;
-            }
-            if (num==5) {
-                show5 = true; 
-            }
-        }
     }
 })
+resetAll();
+document.getElementById("cat2").style.display = "block";
+
+
+function resetAll() {
+    document.getElementById("cat1").style.display = "none";
+    document.getElementById("cat2").style.display = "none";
+    document.getElementById("cat3").style.display = "none";
+    document.getElementById("cat4").style.display = "none";
+    document.getElementById("cat5").style.display = "none";
+}
+
+function changeCat(num) {
+    if (num==1) {
+        resetAll();
+        document.getElementById("cat1").style.display = "block";
+    }
+    if (num==2) {
+        resetAll();
+        document.getElementById("cat2").style.display = "block";
+    }
+    if (num==3) {
+        resetAll();
+        document.getElementById("cat3").style.display = "block";
+    }
+    if (num==4) {
+        resetAll();
+        document.getElementById("cat4").style.display = "block";
+    }
+    if (num==5) {
+        resetAll();
+        document.getElementById("cat5").style.display = "block";
+    }
+}
 
