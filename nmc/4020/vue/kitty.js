@@ -20,9 +20,9 @@ new Vue({
                     catObj.aff = this.catArray[i].affection_level;
                     catObj.indoor = this.catArray[i].indoor;
                     catObj.natural = this.catArray[i].natural;
-                    catObj.intelligence = this.catArray[i].intelligence;
-                    catObj.shedding = this.catArray[i].shedding_level;
-                    catObj.voc = this.catArray[i].vocalisation;
+                    catObj.dog = this.catArray[i].dog_friendly;
+                    catObj.health = this.catArray[i].health_issues;
+                    catObj.soc = this.catArray[i].social_needs;
                     catObj.origin = this.catArray[i].origin;
                     this.breeds.push(catObj);
                 }
@@ -31,18 +31,8 @@ new Vue({
             }
 
         },
-        computeLev(level) {
-            if (level == 1) {
-                return "lightgreen";
-            } else if (level == 2) {
-                return "yellow";
-            } else if (level == 3) {
-                return "orange";
-            } else if (level == 4) {
-                return "red";
-            } else if (level == 5) {
-                return "darkred";
-            }
+        computeSize(size) {
+            return size * 50 + "px";
         }
     }
 })
