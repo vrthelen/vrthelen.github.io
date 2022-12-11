@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Kanji Dictionary</title>
+    <style>
+        #content {
+            width: 800px;
+            margin: 0 auto;
+            
+        }
+        
+        #mainkanji {
+            display: inline-block;
+            word-spacing: 10px;
+        }
+        .maink {
+            width: 30px;
+            border-radius: 10px;
+            border-color: lavender;
+        }
+        li {
+            list-style-type: circle;
+        }
+        .list {
+            width: 30px;
+            border-radius: 10px;
+            border-color: rgb(26, 26, 203);
+        }
+        #namekanji {
+            display: inline-block;
+            word-spacing: 10px;
+        }
+        html {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+            background-color: rgb(99, 70, 49);
+            color: beige;
+        }
+        #ifKanji {
+            display: flexbox;
+            flex-direction: row;
+            padding-left: 30px;
+        }
+        #long {
+            border: 5px dotted rgb(53, 34, 26);
+            padding: 50px;
+        }
+        #symbol {
+            padding-right: 110px;
+        }
+        input[type=text] {
+            width: 300px;
+            height: 20px;
+            font-size: large;
+            padding: 9px;
+            border-radius: 10px;
+            background-color: rgb(173, 138, 114);
+            color: blanchedalmond;
+        }
+        input[type=button] {
+            height: 40px;
+            background-color: indianred;
+            color: blanchedalmond;
+            padding: 9px;
+            border-color: indianred;
+            border-radius: 10px;
+        }
+        #buttons {
+            padding: 20px;
+        }
+        #basicinfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .gradenum {
+            display: flex;
+            flex-direction: column;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="buttons">
+            <input type="text" id="searchBar" placeholder="enter kanji"/>
+            <input type="button" value="Search" v-on:click="userSearch()"/>
+        </div>
+        <div id="ifKanji">
+            <div id="symbol">
+                <img :src="kanjisymbol" :border="bord" width="350" ></img>
+                <div id="basicinfo">
+                    <div class="gradenum">
+                        <h5>Grade</h5>
+                        <div id="num">
+                            {{grade}}
+                        </div>
+                    </div>
+                    <div class="gradenum">
+                        <h5>Strokes</h5>
+                        <div id="num">
+                            {{stroke_count}}
+                        </div>
+                    </div>
+                    <div class="gradenum">
+                        <h5>JLPT level</h5>
+                        <div id="num">
+                            {{jlpt}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="long">
+                <h5>meanings</h5>
+                <div id="meanings" v-for="each in meanings">
+                    <li>{{each}}</li>
+                </div>
+                <h5>kunyomi readings</h5>
+                <div class="disp" v-for="each in kun_readings">
+                    <li>{{each}}</li>
+                </div>
+                <h5>onyomi readings</h5>
+                <div class="disp" v-for="each in on_readings">
+                    <li>{{each}}</li>
+                </div>
+                <h5>name readings</h5>
+                <div class="disp" v-for="each in name_readings">
+                    <li>{{each}}</li>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="ifReading">
+            <h4>{{reading}}</h4>
+            <h5>main kanji</h5>
+            <div id="mainkanji" v-for="each in main_kanji">
+                <div class="maink">{{each}}</div>
+            </div>
+            <h5>name kanji</h5>
+            <div id="namekanji" v-for="each in name_kanji">
+                <div class='maink'>{{each}}</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="final.js"></script>
