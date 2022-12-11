@@ -25,8 +25,6 @@ new Vue({
 
     },
     created() {
-        document.getElementById("ifKanji").style.display = "none";
-        document.getElementById("ifReading").style.display = "none";
         this.kanjisymbol = "kanji/05b66.svg";
         this.color = "black";
     },
