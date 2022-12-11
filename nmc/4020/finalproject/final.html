@@ -82,6 +82,9 @@
             display: flex;
             flex-direction: column;
         }
+        #examples {
+            padding:30px;
+        }
         
     </style>
 </head>
@@ -90,6 +93,13 @@
         <div id="buttons">
             <input type="text" id="searchBar" placeholder="enter kanji"/>
             <input type="button" value="Search" v-on:click="userSearch()"/>
+        </div>
+        <div id="examples">
+            <h3>EXAMPLE KANJI</h3>
+            <li>私</li>
+            <li>話</li>
+            <li>花</li>
+            <li>日</li>
         </div>
         <div id="ifKanji">
             <div id="symbol">
@@ -147,6 +157,8 @@
                 <div class='maink'>{{each}}</div>
             </div>
         </div>
+
+        
 
     </div>
 </body>

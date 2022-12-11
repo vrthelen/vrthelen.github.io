@@ -25,12 +25,16 @@ new Vue({
 
     },
     created() {
+        document.getElementById("ifKanji").style.display = "none";
+        document.getElementById("ifReading").style.display = "none";
+        document.getElementById("examples").style.display = "block";
         this.kanjisymbol = "kanji/05b66.svg";
         this.color = "black";
     },
     methods: {
         async userSearch() {
             this.userInput = document.getElementById("searchBar").value;
+            document.getElementById("examples").style.display = "none";
             try {
                 if (this.userInput.match(/[\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f]/)) {
                     this.reading = this.userInput;
